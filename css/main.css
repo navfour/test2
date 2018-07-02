@@ -1,0 +1,379 @@
+body {
+    min-width: 320px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #000000;
+    background-color: #ebebeb;
+    padding: 0;
+    margin: 0;
+}
+
+footer .footer-links h5 {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+footer h5 {
+    text-transform: uppercase;
+}
+
+h5,
+.h5 {
+    font-size: 14px;
+}
+
+.hidden-md {
+    display: none;
+}
+
+.container-fluid,
+.container {
+    min-width: 320px;
+}
+
+.underline {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 25px;
+    color: #414042;
+}
+
+.underline:after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    border-width: 0 0 1px;
+    border-style: solid;
+}
+
+.bottom-triangle {
+    position: relative;
+    z-index: 999;
+    border-bottom: 0 !important;
+}
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: adelle;
+    font-weight: normal;
+    line-height: 1.1;
+    color: inherit;
+}
+
+.title-wrapper {
+    background: #1111118c;
+    color: #fff;
+    padding: 4px;
+    display: inline-block;
+    margin: 0;
+    font-size: 40px;
+    text-align: left;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+footer .footer-links ul li a {
+    color: #ebebeb !important;
+}
+
+body .container-full {
+    width: 100%;
+    padding: 0;
+}
+
+.header-container .jumbotron {
+    margin-top: 0;
+    min-height: 500px;
+}
+
+.navbar-top {
+    color: #414042;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 0 none;
+    border-radius: 0;
+    margin: 0 auto;
+    top: 0;
+    padding: 0 10px;
+}
+
+.navbar-top .navbar-brand>img {
+    display: block;
+    height: 32px;
+    margin-right: 20px;
+    width: 82px;
+}
+
+.navbar-brand {
+    float: left;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    height: 50px;
+}
+
+.navbar-top .navbar-header {
+    display: inline-block;
+    float: none;
+    margin-top: 2px;
+    width: auto;
+}
+
+.navbar-top a {
+    color: #414042;
+    text-decoration: none;
+}
+
+.navbar-top a:hover {
+    color: #414042;
+}
+
+.navbar-top .navbar-nav {
+    padding: 0 15px 0 15px;
+    float: none;
+}
+
+.navbar-top .navbar-nav li a {
+    color: #414042;
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    padding-bottom: 0;
+    padding-left: 15px;
+    padding-top: 0;
+    padding: 0 20px;
+}
+
+.navbar-top .navbar-nav li a:hover {
+    color: #990033 !important;
+}
+
+.navbar-top .navbar-nav li a:hover,
+.navbar-top .navbar-nav li a:focus {
+    background-color: transparent;
+    color: #414042;
+}
+
+.navbar-top .navbar-nav li a:focus {
+    color: #414042;
+}
+
+.navbar-top .navbar-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: left;
+}
+
+.navbar-top .navbar-nav li {
+    height: 60px;
+    line-height: 60px;
+    float: left;
+}
+
+.header-container {
+    background: url("/img/bg1.jpg");
+    clear: both;
+    height: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 0;
+    padding-right: 15px;
+}
+
+.header-container .jumbotron {
+    color: #FFF;
+    background: transparent;
+    border-radius: 0;
+}
+
+.header-container .jumbotron .container {
+    position: relative;
+    height: auto;
+}
+
+.header-container .jumbotron .container h1 {
+    background-color: transparent;
+    padding: 15px;
+    max-width: 75%;
+}
+
+.header-container .jumbotron .container p {
+    background-color: transparent;
+    padding: 0 15px;
+    font-size: 24px;
+}
+
+.header-container .jumbotron .container.dark h1,
+.header-container .jumbotron .container.dark p {
+    color: #414042 !important;
+}
+
+.header-container .jumbotron.internal {
+    background-position: left center;
+    padding-left: 2px;
+}
+
+.header-container .jumbotron.internal .container {
+    padding-bottom: 70px;
+    padding-top: 70px;
+}
+
+footer {
+    background-color: #414042;
+    color: #fff;
+    position: relative;
+    padding: 35px 0;
+}
+
+.section {
+    padding: 15px 0;
+}
+
+.map-section {
+    background-image: url(/img/map-background.jpg);
+    background-color: #990033;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0;
+    color: #fff;
+    height: auto;
+    padding: 60px;
+}
+
+button,
+.button-default {
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 0;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.map-section span {
+    display: block;
+    color: #c2982d;
+    font-size: 15px;
+}
+
+.btn-img {
+    margin-top: 30px;
+    background: #11111194;
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 0;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: #fff;
+}
+
+.jumbotron.internal {
+    background-image: url("/img/cs1.jpg");
+    background-size: auto 100%;
+}
+
+.panel .panel-body h2 {
+    font-family: 'Adelle';
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+.panel-bg {
+    font-size: 200px;
+    position: absolute;
+    z-index: 0;
+    color: #ffffff17;
+    width: 100%;
+    left: 0;
+    top: 70px;
+}
+
+.map-section {
+    padding: 120px 60px;
+}
+
+.footer-links {
+    margin: 30px -15px;
+}
+
+.hero-section .jumbotron {
+    color: #fff;
+    background: url(/img/careers-hero.jpg);
+    padding-top: 80px;
+    padding-bottom: 20px;
+    background-size: 100% auto;
+    background-position: center;
+}
+
+body.main-content-rgis .hero-section .jumbotron {
+    min-height: 300px;
+}
+
+body.main-content-rgis .hero-section .jumbotron h1 {
+    font-size: 48px;
+}
+
+footer .footer-links .col-md-3 {
+    padding-left: 0;
+    padding-right: 0;
+    width: 19.7%;
+}
+
+footer .footer-links .col-md-6 {
+    padding-left: 15px;
+    padding-right: 0;
+    width: 39.7%;
+}
+
+.tab-content #retailContent .col-md-4 {
+    border-left: 1px solid #990033 !important;
+    padding-left: 20px !important;
+}
+
+.breadcrumb {
+    margin-left: 15px;
+}
+
+.nav.nav-tabs.hidden-xs {
+    margin-left: 0;
+}
+
+.navbar-top {
+    height: 60px !important;
+}
