@@ -200,7 +200,7 @@ body .container-full {
 }
 
 .header-container {
-    background: url("/img/bg1.jpg");
+    background: url("../img/bg1.jpg");
     clear: both;
     height: auto;
     background-position: center center;
@@ -304,7 +304,7 @@ button,
 }
 
 .jumbotron.internal {
-    background-image: url("/img/cs1.jpg");
+    background-image: url("./../img/cs1.jpg");
     background-size: auto 100%;
 }
 
