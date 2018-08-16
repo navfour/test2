@@ -304,7 +304,7 @@ button,
 }
 
 .jumbotron.internal {
-    background-image: url("./../img/cs1.jpg");
+    background-image: url("../img/cs1.jpg");
     background-size: auto 100%;
 }
 
@@ -368,6 +368,7 @@ footer .footer-links .col-md-6 {
 
 .breadcrumb {
     margin-left: 15px;
+    margin-top: 10px;
 }
 
 .nav.nav-tabs.hidden-xs {
@@ -376,4 +377,16 @@ footer .footer-links .col-md-6 {
 
 .navbar-top {
     height: 60px !important;
+}
+
+.webinars p {
+    text-indent: 20px;
+    padding: 0 32px;
+    color: #7d7d80;
+    line-height: 1.8;
+}
+
+body .row.news-articles {
+    margin-top: -10px;
+    margin-bottom: 30px;
 }
