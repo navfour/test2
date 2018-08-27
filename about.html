@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/about.css" media="screen" />
     <script src="js/main.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/china.js"></script>
 </head>
 
 <body class="main-content-rgis">
@@ -118,14 +120,14 @@
                         <img class="img-responsive" src="http://webassets.rgis.com/PublishingImages/about-us/about-40-locations.png" alt="" style="width: 2151px;"> &nbsp;</div>
                     <div class="col-md-6 col-md-offset-2">
                         <h2 class="white" style="font-size: 36px;">40多个国家和地区拥有专业团队</h2>
-                        <p style="font-size: 24px;">RGIS在全球200多个办事处拥有34000名员工。只要有需要我们的地方，我们就有本地资源，可靠而高效地完成任何库存盘点需求。</p>
+                        <p style="font-size: 24px;">RGIS在全球200多个办事处拥有34,000名员工。只要有需要我们的地方，我们就有本地资源，可靠而高效地完成任何库存盘点需求。</p>
                         ​​​</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section">
+    <section class="section background-white">
         <div class="container technology">
             <div class="row">
                 <!-- RGISTechnologyZoneOWSHTML -->
@@ -160,6 +162,22 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section class="section">
+        <div class="container technology">
+            <div class="row">
+                <!-- RGISTechnologyZoneOWSHTML -->
+                ​​
+                <div class="row">
+                    <div class="col-md-12 text-center underline">
+                        <h2 class="default">中国办事处</h2>
+                    </div>
+                </div>
+                <div class="row ">
+                    <p>我们在上海，北京，广州，深圳，成都，杭州，苏州有设立本地服务网点，并实现了全国范围内的一二线主要城市就近全覆盖。</p>
+                    <div id="main" style="width: 100%;height:600px;"> </div>
+                </div>
+            </div>
     </section>
     <section class="section background-white">
         <div class="container">
@@ -268,7 +286,7 @@
                             <h4 class="timeline-title">2010-现在</h4>
                         </div>
                         <div class="timeline-body">
-                            <p>无线技术和软件的进步使得实时报告成为可能。移动应用程序添加 新的洞察力和透明度。​​​​​​​​​​​
+                            <p>无线技术和软件的进步使实时报告成为可能，移动应用程序的使用也将盘点透明度和信息量推到新的水准。
                             </p>
                             <img class="img-responsive" src="http://webassets.rgis.com/PublishingImages/about-us/about-2010.jpg?RenditionID=16" alt="">
                         </div>
@@ -361,6 +379,77 @@
             </div>
         </div>
     </footer>
+    <script>
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            geo: {
+                map: 'china',
+                itemStyle: {
+                    areaColor: '#990134',
+                    color: '#fff',
+                    borderColor: "#fff"
+                },
+                emphasis: {
+                    itemStyle: {
+                        areaColor: '#990134',
+                        color: '#fff'
+                    },
+                }
+            },
+            series: [{
+                name: '地区覆盖',
+                type: 'effectScatter',
+                coordinateSystem: 'geo',
+                data: [{
+                        name: '北京',
+                        value: [116.46, 39.92]
+                    },
+                    {
+                        name: '上海',
+                        value: [121.48, 31.22]
+                    },
+                    {
+                        name: '广州',
+                        value: [113.23, 23.16]
+                    }, {
+                        name: '深圳',
+                        value: [114.07, 22.62],
+                    }, {
+                        name: '苏州',
+                        value: [120.62, 31.32],
+                    }, {
+                        name: '杭州',
+                        value: [120.19, 30.26],
+                    }, {
+                        name: '成都',
+                        value: [104.06, 30.67],
+
+                    },
+                ],
+                symbolSize(val) {
+                    return 30 + Math.random() * 30;
+                },
+                itemStyle: {
+                    color: 'rgba(251, 216, 131, 0.2)'
+                },
+                label: {
+                    normal: {
+                        formatter: '{b}',
+                        show: true
+                    },
+                    emphasis: {
+                        show: true
+                    }
+                }
+            }]
+        }
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
 </body>
 
 </html>
