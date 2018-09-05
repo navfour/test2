@@ -390,3 +390,21 @@ body .row.news-articles {
     margin-top: -10px;
     margin-bottom: 30px;
 }
+
+.homepage-sb .panel-body .list-group-index-service {
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.6;
+    text-indent: 20px;
+}
+
+.homepage-sb .panel-body h4 {
+    text-indent: 20px;
+    line-height: 1.6;
+}
+
+.homepage-sb .panel-body h5 {
+    line-height: 1.6;
+    font-size: 16px;
+    text-indent: 20px;
+}
