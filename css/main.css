@@ -260,7 +260,7 @@ footer {
 }
 
 .map-section {
-    background-image: url(/img/map-background.jpg);
+    background-image: url(../img/map-background.jpg);
     background-color: #990033;
     background-position: center center;
     background-repeat: no-repeat;
@@ -334,7 +334,7 @@ button,
 
 .hero-section .jumbotron {
     color: #fff;
-    background: url(/img/careers-hero.jpg);
+    background: url(../img/careers-hero.jpg);
     padding-top: 80px;
     padding-bottom: 20px;
     background-size: 100% auto;
@@ -407,4 +407,20 @@ body .row.news-articles {
     line-height: 1.6;
     font-size: 16px;
     text-indent: 20px;
+}
+
+.tab-content .row-service .row {
+    padding-top: 0;
+}
+
+.row-service-odd .panel.panel-red {
+    background-color: #414042 !important;
+}
+
+.row-service-odd .panel.panel-red.left-triangle:before {
+    border-right-color: #414042;
+}
+
+.mt20 {
+    margin-top: 40px;
 }
