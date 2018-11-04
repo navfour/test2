@@ -12,8 +12,9 @@
     <link rel="stylesheet" type="text/css" href="css/panel.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/careers.css" media="screen" />
-
+    <link rel="stylesheet" type="text/css" href="css/service.css" media="screen" />
     <script src="js/main.js"></script>
+    <script src="js/jquery.js"></script>
 </head>
 
 <body class="main-content-rgis">
@@ -60,7 +61,6 @@
                         <span>
                             <a>服务介绍</a>
                         </span>
-                        <span> | </span>
                     </li>
                 </ol>
 
@@ -72,12 +72,18 @@
         <div class="solution-tab-content">
             <ul class="nav nav-tabs hidden-xs">
                 <li class="retail-hover bottom-triangle active-pane active">
-                    <a data-toggle="tab" href="#retailContent" data-i18n="page.labels.retail">服务</a>
+                    <a data-index="1">流程</a>
+                </li>
+                <li class="retail-hover bottom-triangle active-pane">
+                    <a data-index="2">方法</a>
+                </li>
+                <li class="retail-hover bottom-triangle active-pane">
+                    <a data-index="3">优点</a>
                 </li>
             </ul>
             <div class="panel-group tab-accordion visible-xs"></div>
             <div class="tab-content hidden-xs">
-                <div class="tab-pane fade in active-pane active">
+                <div id="tab1" class="tab-pane fade in active-pane active">
                     <div class="row">
                         <div class="col-md-12 tab-pane-content">
                             <div class="ms-webpart-zone ms-fullWidth">
@@ -88,39 +94,51 @@
                                             <div style="display: none;"></div>
                                             <div>
                                                 <div class="row">
-                                                    <div class="col-md-4 catalog-item-box">
-                                                        <h4>
-                                                            <a>
-                                                                方法 </a>
-                                                        </h4>
-                                                        <p>我们追求客户满意度为第一准则，使客户在瞬息万变的市场上保持领先。</p>
-                                                        <p>通过读取单件商品条形码进行计数，数据报告格式将按照您公司的要求进行设计。
-                                                            通过比对提供的库存数据来得到与账面库存之间的差距明细，适用于大多数盘点要求。
-                                                        </p>
-                                                        <p>通过输入商品销售价格进行计数，根据客户要求的报告格式进行数据汇总，在无法获取商品主档信息，只需获取库存金额量时适用此方法。</p>
-                                                        <hr>
-                                                    </div>
-                                                    <div class="col-md-4 catalog-item-box">
-                                                        <h4>
-                                                            <a>
-                                                                流程 </a>
-                                                        </h4>
-                                                        <p>用准确、高效、诚信的盘点支持商店利润管理</p>
-                                                        <p>更高的精度，更可依赖的结果</p>
-                                                        <p>盘点结果让管理层准确了解库存水平，防止内部与外部因素的库存损失，加强企业内部管理水平，增加利润。</p>
-                                                        <p>RGIS使用自行研发的高效盘点系统，并配备行业领先的盘点设备，加上训练有素的专业盘点队伍，保障盘点结果得以完美呈现。</p>
-
-                                                        <hr>
-                                                    </div>
-                                                    <div class="col-md-4 catalog-item-box">
-                                                        <h4>
-                                                            <a>
-                                                                优点 </a>
-                                                        </h4>
-                                                        <p>编制组织盘点的时间与成本，员工培训，加班成本，数据处理与整合难度给企业自行组织盘点带来巨大的压力，第三方盘点提供一站式盘点解决方案，节省企业大量成本，让客户专注于销售，提高盈利水平。</p>
-                                                        <p>独立的盘点团队，秉承诚信，公正，客观的原则进行盘点，排除企业内部各方面因素干扰，得到最为客观公正的盘点结果。</p>
-                                                        <p>根据客户要求，可以选择营业期间，营业外时间进行盘点，行程安排灵活度更高。</p>
-                                                        <hr>
+                                                    <div class="flow-box">
+                                                        <div class="row">
+                                                            <div class="flow-item">
+                                                                <div class="flow-title">1.咨询</div>
+                                                                <div class="flow-content">请通过网站，电话，电子邮件与我们联系，我们会按要求及时回应。</div>
+                                                            </div>
+                                                            <div class="flow-item flow-item-split">
+                                                                <div class="flow-title">2.需求分析</div>
+                                                                <div class="flow-content">我们的销售代表将与您取得联系，了解初步盘点要求，并提供公司介绍，流程简介。另外，我们会按照您的要求在双方方便的情况下召开会议。</div>
+                                                            </div>
+                                                            <div class="flow-item">
+                                                                <div class="flow-title">3.现场勘查</div>
+                                                                <div class="flow-content">我们将派出经验丰富的盘点领队，对现场的商品布局作详尽勘察以设计最适用的盘点流程。</div>
+                                                            </div>
+                                                            <div class="flow-item flow-item-split">
+                                                                <div class="flow-title">4.报价流程与制定</div>
+                                                                <div class="flow-content">RGIS按照盘点需求制定盘点流程，做出报价与费用预估。</div>
+                                                            </div>
+                                                            <div class="flow-item flow-item-last">
+                                                                <div class="flow-title">5.合同签订</div>
+                                                                <div class="flow-content">客户核准价格与流程之后，双方签署合作协议</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="flow-item flow-item-split">
+                                                                <div class="flow-title">6.盘点前访问</div>
+                                                                <div class="flow-content">在正式进行盘点之前，我们的现场盘点领队将访问盘点现场，与现场工作人员详尽沟通盘点流程，时间与人员安排，双方配合事项等。</div>
+                                                            </div>
+                                                            <div class="flow-item">
+                                                                <div class="flow-title">7.盘点</div>
+                                                                <div class="flow-content">在盘点当天，我们的团队将按计划进行现场盘点，随时沟通盘点进度。</div>
+                                                            </div>
+                                                            <div class="flow-item flow-item-split">
+                                                                <div class="flow-title">8.数据处理</div>
+                                                                <div class="flow-content">我们将定期传输盘点数据，并检查所有商品的盘点进度，随时解决突发状况。</div>
+                                                            </div>
+                                                            <div class="flow-item">
+                                                                <div class="flow-title">9.盘点报告</div>
+                                                                <div class="flow-content">出具最终盘点报告，双方签字确认盘点结果，并按照既定的方式将数据提交给客户。</div>
+                                                            </div>
+                                                            <div class="flow-item  flow-item-split flow-item-last">
+                                                                <div class="flow-title">10.盘点总结</div>
+                                                                <div class="flow-content">我们将安排盘点回顾与总结会议，讨论盘点流程与结果，完善双方合作流程，并计划下轮次盘点。</div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -131,189 +149,78 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row row-service mt20">
-                        <div class="ms-webpart-zone ms-fullWidth">
-                            <div class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
-                                <div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
-                                    <div webpart haspers="false" width="100%" class="ms-WPBody noindex ms-wpContentDivSpace "
-                                        allowdelete="false" style="">
-                                        <div style="display: none;"></div>
-                                        <div component>
-                                            <div class="row">
-                                                <div class="rgis-common-rollup" data-displaytemplate="Common Rollup">
-                                                    <div class="container">
-                                                        <div class="row">
-                                                            <div class="panel panel-default image-left col-md-4">
-                                                                <img class="img-responsive" src="img/is0.jpg">
-                                                            </div>
-                                                            <div class="panel panel-default panel-red left-triangle col-md-8">
-                                                                <div class="panel-heading">
-                                                                    <h4 class="panel-title ">
-                                                                        实物库存盘点服务</h4>
-                                                                </div>
-                                                                <div class="panel-body">
-                                                                    <p>
-                                                                        我们的库存盘点服务通过行业领先的技术与经验丰富的盘点队伍，高素质的管理队伍来释放客户企业员工的工作压力，提供具有成本效益的准确结果。
-                                                                    </p>
-                                                                    <br>
-                                                                    <p>
-                                                                        我们的库存盘点服务由以下组成：
-                                                                        <ul>
-                                                                            <li>-RGIS自行研发的盘点系统及先进的盘点设备</li>
-                                                                            <li>-统计所有库存数量或金额</li>
-                                                                            <li>-实现现场即时得到盘点结果，现场核查差异原因</li>
-                                                                        </ul>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="ms-clear"></div>
+                </div>
+                <div id="tab2" class="tab-pane fade in active-pane">
+                    <div class="row">
+                        <div class="col-md-12 tab-pane-content method-box">
+                            <div>
+                                根据客户对盘点的不同需求,提供定制化盘点方式
+                                我们追求客户满意度为第一准则，使客户在瞬息万变的市场上保持领先
+                            </div>
+                            <div class="method-equal-box row">
+                                <div class="method-item">
+                                    <div class="method-inner"> 追求<br> 精准性</div>
+                                </div>
+                                <div class="method-item method-item-small">
+                                    <div class="method-inner"> +</div>
+                                </div>
+                                <div class="method-item">
+                                    <div class="method-inner"> 计算<br> 高效率</div>
+                                </div>
+                                <div class="method-item  method-item-small">
+                                    <div class="method-inner"> =</div>
+                                </div>
+                                <div class="method-item method-item-last">
+                                    <div class="method-inner"> 客户满意度</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="method-text">
+                                    <div class="method-text-title">记件盘点 </div>
+                                    <div class="method-text-content">
+                                        通过读取单件商品条形码进行计数，数据报告格式将按照您公司的要求进行设计。
+                                        通过比对提供的库存数据来得到与账面库存之间的差距明细，适用于大多数盘点要求。
                                     </div>
+                                </div>
+                                <div class="method-text">
+                                    <div class="method-text-title">金额盘点</div>
+                                    <div class="method-text-content">通过输入商品销售价格进行计数，根据客户要求的报告格式进行数据汇总，在无法获取商品主档信息，只需获取库存金额量时适用此方法。</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row row-service row-service-odd">
-                        <div class="ms-webpart-zone ms-fullWidth">
-                            <div class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
-                                <div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
-                                    <div webpart haspers="false" width="100%" class="ms-WPBody noindex ms-wpContentDivSpace "
-                                        allowdelete="false" style="">
-                                        <div style="display: none;"></div>
-                                        <div component>
-                                            <div class="row">
-                                                <div class="rgis-common-rollup" data-displaytemplate="Common Rollup">
-                                                    <div class="container">
-                                                        <div class="row">
-                                                            <div class="panel panel-default image-left col-md-4">
-                                                                <img class="img-responsive" src="img/is1.png">
-                                                            </div>
-                                                            <div class="panel panel-default panel-red left-triangle col-md-8">
-                                                                <div class="panel-heading">
-                                                                    <h4 class="panel-title ">
-                                                                        固定资产巡检（各零售业态）</h4>
-                                                                </div>
-                                                                <div class="panel-body">
-                                                                    <p>
-                                                                        我们的库存固定资产巡检服务通过自主研发的固定资产清查记录系统与规范的资产巡检流程，实现对固定资产的最佳管控。
-                                                                    </p>
-                                                                    <br>
-                                                                    <p>
-                                                                        我们的固定资产巡检服务由以下组成：
-                                                                        <ul>
-                                                                            <li>RGIS自行研发的固定资产清查记录系统及规范的资产巡检流程</li>
-                                                                            <li>可与本公司其他盘点行程相结合，循环盘点或抽查等，降低客户差旅和自行巡检时间成本等</li>
-                                                                            <li>实现现场巡检结束总部即时得到巡检结果，如果需要可以配合记录差异原因等</li>
-                                                                        </ul>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="ms-clear"></div>
-                                    </div>
-                                </div>
+                </div>
+                <div id="tab3" class="tab-pane fade in active-pane">
+                    <div class="row merit-box ">
+                        <div class="col-md-12 tab-pane-content">
+                            <div class="merit-item">
+                                <div class="merit-title">专业团队,精确结果 </div>
+                                <div class="merit-content">
+                                    盘点结果让管理层准确了解库存水平，防止内部与外部因素的库存损失，加强企业内部管理水平，增加利润。</div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row row-service">
-                        <div class="ms-webpart-zone ms-fullWidth">
-                            <div class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
-                                <div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
-                                    <div webpart haspers="false" width="100%" class="ms-WPBody noindex ms-wpContentDivSpace "
-                                        allowdelete="false" style="">
-                                        <div style="display: none;"></div>
-                                        <div component>
-                                            <div class="row">
-                                                <div class="rgis-common-rollup" data-displaytemplate="Common Rollup">
-                                                    <div class="container">
-                                                        <div class="row">
-                                                            <div class="panel panel-default image-left col-md-4">
-                                                                <img class="img-responsive" src="img/is2.png">
-                                                            </div>
-                                                            <div class="panel panel-default panel-red left-triangle col-md-8">
-                                                                <div class="panel-heading">
-                                                                    <h4 class="panel-title ">
-                                                                        百货商场柜台SOP流程巡检</h4>
-                                                                </div>
-                                                                <div class="panel-body">
-                                                                    <p>
-                                                                        我们的百货商场柜台SOP流程巡检服务根据客户需求进行制定制化的标准作业巡检流程。第三方巡检最大限度的避免企业内部巡检舞弊作假不规范操作。
-                                                                    </p>
-                                                                    <br>
-                                                                    <p>
-                                                                        我们的百货商场柜台SOP流程巡检服务由以下组成：
-                                                                        <ul>
-                                                                            <li>RGIS根据客户目标要求制定符合需求的SOP巡检表、巡检流程等</li>
-                                                                            <li>巡检项目包括商场库存与POS比对，小票抽检，台帐货品抽检、试用装管理等SOP流程，如果需要可提供现场照片证据支持等</li>
-                                                                            <li>可与本公司其他盘点行程相结合，循环巡检或抽查等，降低客户差旅和自行巡检时间成本等</li>
-                                                                            <li>定期汇总SOP巡检结果、巡检责任书、巡检报告等</li>
-                                                                        </ul>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="ms-clear"></div>
-                                    </div>
-                                </div>
+                            <div class="merit-item">
+                                <div class="merit-title">
+                                    盘点的好处</div>
+                                <div class="merit-content">
+                                    RGIS使用自行研发的高效盘点系统，并配备行业领先的盘点设备，加上训练有素的专业盘点队伍，保障盘点结果得以完美呈现。</div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row row-service row-service-odd">
-                        <div class="ms-webpart-zone ms-fullWidth">
-                            <div class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
-                                <div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
-                                    <div webpart haspers="false" width="100%" class="ms-WPBody noindex ms-wpContentDivSpace "
-                                        allowdelete="false" style="">
-                                        <div style="display: none;"></div>
-                                        <div component>
-                                            <div class="row">
-                                                <div class="rgis-common-rollup" data-displaytemplate="Common Rollup">
-                                                    <div class="container">
-                                                        <div class="row">
-                                                            <div class="panel panel-default image-left col-md-4">
-                                                                <img class="img-responsive" src="img/is3.png">
-                                                            </div>
-                                                            <div class="panel panel-default panel-red left-triangle col-md-8">
-                                                                <div class="panel-heading">
-                                                                    <h4 class="panel-title ">
-                                                                        盘点设备租赁方案及人力派遣</h4>
-                                                                </div>
-                                                                <div class="panel-body">
-                                                                    <p>
-                                                                        我们的盘点设备租赁方案及人力派遣服务,可以根据客户的预算，其他因素考虑必须由本企业员工完成盘点的部分，提供盘点设备支持及人力派遣支持，秉承专业的盘点队伍
-                                                                        ，及先进的盘点设备服务理念，为客户提供最大的效益支持。
-                                                                    </p>
-                                                                    <br>
-                                                                    <p>
-                                                                        我们的盘点设备租赁方案及人力派遣服务由以下组成：
-                                                                        <ul>
-                                                                            <li>RGIS根据客户需要现场领队（IT/主管等）、盘点设备等提供数据数据，数据汇总等操作，高效准确的完成既定客户盘点项目。</li>
-                                                                            <li>亦可根据客户需求完成其他操作，如：IT数据现场覆盖，盘点监程序，报告整理等</li>
-                                                                            <li>•人力派遣可满足全国各大省会及主要城市覆盖，提供高素质盘点队伍</li>
-                                                                        </ul>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="ms-clear"></div>
-                                    </div>
-                                </div>
+                            <div class="merit-item">
+                                <div class="merit-title">
+                                    成本优势</div>
+                                <div class="merit-content">
+                                    编制组织盘点的时间与成本，员工培训，加班成本，数据处理与整合难度给企业自行组织盘点带来巨大的压力，第三方盘点提供一站式盘点解决方案，节省企业大量成本，让客户专注于销售，提高盈利水平。</div>
+                            </div>
+                            <div class="merit-item">
+                                <div class="merit-title">
+                                    第三方客观公正结果</div>
+                                <div class="merit-content">
+                                    独立的盘点团队，秉承诚信，公正，客观的原则进行盘点，排除企业内部各方面因素干扰，得到最为客观公正的盘点结果。</div>
+                            </div>
+                            <div class="merit-item">
+                                <div class="merit-title">
+                                    灵活的行程和时间安排</div>
+                                <div class="merit-content">
+                                    根据客户要求，可以选择营业期间，营业外时间进行盘点，行程安排灵活度更高。</div>
                             </div>
                         </div>
                     </div>
@@ -322,6 +229,193 @@
             <!--//.tab-content-->
         </div>
         <!--//.solution-tab-content-->
+        <div class="service-box">
+            <div class="row row-service mt20">
+                <div class="ms-webpart-zone ms-fullWidth">
+                    <div class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+                        <div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
+                            <div webpart haspers="false" width="100%" class="ms-WPBody noindex ms-wpContentDivSpace "
+                                allowdelete="false" style="">
+                                <div style="display: none;"></div>
+                                <div component>
+                                    <div class="row">
+                                        <div class="rgis-common-rollup" data-displaytemplate="Common Rollup">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="panel panel-default image-left col-md-4">
+                                                        <img class="img-responsive" src="img/is0.jpg">
+                                                    </div>
+                                                    <div class="panel panel-default panel-red left-triangle col-md-8">
+                                                        <div class="panel-heading">
+                                                            <h4 class="panel-title ">
+                                                                实物库存盘点服务</h4>
+                                                        </div>
+                                                        <div class="panel-body">
+                                                            <p>
+                                                                我们的库存盘点服务通过行业领先的技术与经验丰富的盘点队伍，高素质的管理队伍来释放客户企业员工的工作压力，提供具有成本效益的准确结果。
+                                                            </p>
+                                                            <br>
+                                                            <p>
+                                                                我们的库存盘点服务由以下组成：
+                                                                <ul>
+                                                                    <li>RGIS自行研发的盘点系统及先进的盘点设备</li>
+                                                                    <li>统计所有库存数量或金额</li>
+                                                                    <li>实现现场即时得到盘点结果，现场核查差异原因</li>
+                                                                </ul>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ms-clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-service row-service-odd">
+                <div class="ms-webpart-zone ms-fullWidth">
+                    <div class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+                        <div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
+                            <div webpart haspers="false" width="100%" class="ms-WPBody noindex ms-wpContentDivSpace "
+                                allowdelete="false" style="">
+                                <div style="display: none;"></div>
+                                <div component>
+                                    <div class="row">
+                                        <div class="rgis-common-rollup" data-displaytemplate="Common Rollup">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="panel panel-default image-left col-md-4">
+                                                        <img class="img-responsive" src="img/is1.png">
+                                                    </div>
+                                                    <div class="panel panel-default panel-red left-triangle col-md-8">
+                                                        <div class="panel-heading">
+                                                            <h4 class="panel-title ">
+                                                                固定资产巡检（各零售业态）</h4>
+                                                        </div>
+                                                        <div class="panel-body">
+                                                            <p>
+                                                                我们的库存固定资产巡检服务通过自主研发的固定资产清查记录系统与规范的资产巡检流程，实现对固定资产的最佳管控。
+                                                            </p>
+                                                            <br>
+                                                            <p>
+                                                                我们的固定资产巡检服务由以下组成：
+                                                                <ul>
+                                                                    <li>RGIS自行研发的固定资产清查记录系统及规范的资产巡检流程</li>
+                                                                    <li>可与本公司其他盘点行程相结合，循环盘点或抽查等，降低客户差旅和自行巡检时间成本等</li>
+                                                                    <li>实现现场巡检结束总部即时得到巡检结果，如果需要可以配合记录差异原因等</li>
+                                                                </ul>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ms-clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-service">
+                <div class="ms-webpart-zone ms-fullWidth">
+                    <div class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+                        <div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
+                            <div webpart haspers="false" width="100%" class="ms-WPBody noindex ms-wpContentDivSpace "
+                                allowdelete="false" style="">
+                                <div style="display: none;"></div>
+                                <div component>
+                                    <div class="row">
+                                        <div class="rgis-common-rollup" data-displaytemplate="Common Rollup">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="panel panel-default image-left col-md-4">
+                                                        <img class="img-responsive" src="img/is2.png">
+                                                    </div>
+                                                    <div class="panel panel-default panel-red left-triangle col-md-8">
+                                                        <div class="panel-heading">
+                                                            <h4 class="panel-title ">
+                                                                百货商场柜台SOP流程巡检</h4>
+                                                        </div>
+                                                        <div class="panel-body">
+                                                            <p>
+                                                                我们的百货商场柜台SOP流程巡检服务根据客户需求进行制定制化的标准作业巡检流程。第三方巡检最大限度的避免企业内部巡检舞弊作假不规范操作。
+                                                            </p>
+                                                            <br>
+                                                            <p>
+                                                                我们的百货商场柜台SOP流程巡检服务由以下组成：
+                                                                <ul>
+                                                                    <li>RGIS根据客户目标要求制定符合需求的SOP巡检表、巡检流程等</li>
+                                                                    <li>巡检项目包括商场库存与POS比对，小票抽检，台帐货品抽检、试用装管理等SOP流程，如果需要可提供现场照片证据支持等</li>
+                                                                    <li>可与本公司其他盘点行程相结合，循环巡检或抽查等，降低客户差旅和自行巡检时间成本等</li>
+                                                                    <li>定期汇总SOP巡检结果、巡检责任书、巡检报告等</li>
+                                                                </ul>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ms-clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-service row-service-odd">
+                <div class="ms-webpart-zone ms-fullWidth">
+                    <div class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+                        <div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
+                            <div webpart haspers="false" width="100%" class="ms-WPBody noindex ms-wpContentDivSpace "
+                                allowdelete="false" style="">
+                                <div style="display: none;"></div>
+                                <div component>
+                                    <div class="row">
+                                        <div class="rgis-common-rollup" data-displaytemplate="Common Rollup">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="panel panel-default image-left col-md-4">
+                                                        <img class="img-responsive" src="img/is3.png">
+                                                    </div>
+                                                    <div class="panel panel-default panel-red left-triangle col-md-8">
+                                                        <div class="panel-heading">
+                                                            <h4 class="panel-title ">
+                                                                盘点设备租赁方案及人力派遣</h4>
+                                                        </div>
+                                                        <div class="panel-body">
+                                                            <p>
+                                                                我们的盘点设备租赁方案及人力派遣服务可以根据客户的预算、行程等因素考虑，对于必须由本企业员工完成盘点的部分，提供盘点设备支持及人力派遣支持，秉承专业的盘点队伍及先进的盘点设备服务理念，为客户提供最大的效益支持。
+                                                            </p>
+                                                            <br>
+                                                            <p>
+                                                                我们的盘点设备租赁方案及人力派遣服务由以下组成：
+                                                                <ul>
+                                                                    <li>RGIS根据客户需要安排现场领队（IT/盘点主管）、提供盘点设备等，提供数据处理，数据汇总等操作，高效准确的完成既定客户盘点项目。</li>
+                                                                    <li>亦可根据客户需求完成其他操作，如：IT数据现场覆盖，盘点监程序，报告整理等</li>
+                                                                    <li>人力派遣可满足全国各大省会及主要城市覆盖，提供高素质盘点队伍</li>
+                                                                </ul>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ms-clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <footer>
         <div class="container">
@@ -380,7 +474,7 @@
                             <a href="./careers.html">人才招聘</a>
                         </li>
                         <li>
-                            
+
                         </li>
                     </ul>
                 </div>
@@ -405,6 +499,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/service.js"></script>
 </body>
 
 </html>

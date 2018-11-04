@@ -1,0 +1,141 @@
+.flow-box {
+    padding: 40px 32px 0;
+}
+
+.flow-item {
+    float: left;
+    width: 20%;
+    padding: 0;
+    height: 180px;
+    margin-bottom: 32px;
+    background: #414042;
+    color: #fff;
+    position: relative;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.flow-item.flow-item-split {
+    background: #6b6767;
+}
+
+.flow-item.flow-item-split:after {
+    border-left: solid 15px #6b6767;
+}
+
+.flow-title {
+    font-size: 16px;
+    text-align: center;
+    padding: 8px;
+    background: #ebebeb5c;
+}
+
+.flow-content {
+    text-indent: 18px;
+    font-size: 12px;
+    padding: 16px 20px 0 32px;
+}
+
+.flow-item:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    right: -12px;
+    margin-top: -12px;
+    width: 0;
+    height: 0;
+    border-top: solid 15px transparent;
+    border-bottom: solid 15px transparent;
+    border-left: solid 15px #414042;
+}
+
+.flow-item.flow-item-last:after {
+    content: none;
+}
+
+.tab-content .row {
+    padding-top: 0;
+}
+
+.merit-box {
+    margin-top: 40px;
+}
+
+.merit-item {
+    float: left;
+    width: 20%;
+    padding: 8px 16px;
+    border-left: 1px solid #903;
+    height: 240px;
+}
+
+.merit-title {
+    color: #903;
+    font-weight: bold;
+    padding: 16px 0;
+    font-size: 15px;
+}
+
+.merit-content {}
+
+.method-equal-box {
+    margin: 8px 20% 8px 0%;
+}
+
+.method-item {
+    float: left;
+    width: 22.5%;
+    text-align: center;
+}
+
+.method-inner {
+    margin: 16px;
+    padding: 16px;
+    background: #414042;
+    font-size: 20px;
+    color: #fff;
+    height: 92px;
+}
+
+.method-item-small {
+    width: 10%;
+}
+
+.method-item-small .method-inner {
+    font-size: 42px;
+    margin: 32px 32px;
+    height: 53px;
+    background: transparent;
+    color: #414042;
+    padding: 0;
+}
+
+.method-item-last .method-inner {
+    padding-top: 32px;
+    background: #903;
+
+}
+
+
+.method-text {
+    float: left;
+    width: 50%;
+    padding: 8px 16px 32px;
+    border-left: 1px solid #903;
+}
+
+.method-text-title {
+    color: #903;
+    font-weight: bold;
+    padding: 16px 0;
+    font-size: 15px;
+}
+
+.method-box {
+    padding: 40px 30px;
+}
+
+.service-box {
+    margin-bottom: 60px;
+}
