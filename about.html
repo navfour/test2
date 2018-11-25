@@ -102,7 +102,8 @@
                 <div class="col-md-8">
                     <h2 class="default">关于RGIS</h2>
                     <p style="font-size: 20px;">RGIS是Retail Grocery Inventory
-                        Specialist（零售杂货店盘点服务）的缩写。作为行业先驱，我们早期获得的成功让我们迅速扩大我们的规模并迅速延伸到其他行业。几十年过去了，我们的服务已比我们的名字涵义更广。RGIS每天为各种规模和类型的公司提供1,400项盘点服务。</p>
+                        Specialist（零售杂货店盘点服务）的缩写。作为行业先驱，我们早期获得的成功让我们迅速扩大我们的规模并迅速延伸到其他行业。几十年过去了，我们的服务已比我们的名字涵义更广。RGIS
+                        每天为各种规模和类型的公司提供1,400项盘点服务。</p>
                 </div>
                 <div class="col-md-4">
                     <img class="img-responsive" src="./img/60only.png" alt="" style="width: 207px;">
@@ -178,7 +179,7 @@
                     </div>
                 </div>
                 <div class="row ">
-                    <p>我们在上海，北京，广州，深圳，成都，杭州，苏州有设立本地服务网点，并实现了全国范围内的一二线主要城市就近全覆盖。</p>
+                    <p>我们在上海，北京，广州，深圳，成都，杭州，苏州，香港，台北有设立本地服务网点，并实现了全国范围内的一二线主要城市就近全覆盖。</p>
                     <div id="main" style="width: 100%;height:600px;"> </div>
                 </div>
             </div>
@@ -364,7 +365,7 @@
                             <a href="./careers.html">人才招聘</a>
                         </li>
                         <li>
-                            
+
                         </li>
                     </ul>
                 </div>
@@ -426,7 +427,10 @@
                         value: [113.23, 25.16]
                     }, {
                         name: '深圳',
-                        value: [114.07, 22.62],
+                        value: [114.07, 23.42],
+                    }, {
+                        name: '香港',
+                        value: [114.07, 21.82],
                     }, {
                         name: '苏州',
                         value: [120.62, 33.32],
@@ -436,11 +440,13 @@
                     }, {
                         name: '成都',
                         value: [104.06, 30.67],
-
-                    },
+                    }, {
+                        name: '台北',
+                        value: [121.1, 24.82],
+                    }
                 ],
-                symbolSize(val) {
-                    return 30 + Math.random() * 30;
+                symbolSize: function (val) {
+                    return 24 + Math.random() * 30;
                 },
                 itemStyle: {
                     color: 'rgba(251, 216, 131, 0.2)'
@@ -448,7 +454,7 @@
                 label: {
                     normal: {
                         formatter: '{b}',
-                        fontSize: 16,
+                        fontSize: 14,
                         show: true
                     },
                     emphasis: {

@@ -1,3 +1,35 @@
+@font-face {
+    font-family: 'aachen';
+    src: url('../fonts/aachen.eot');
+    src: url('../fonts/aachen.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/aachen.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/aachen.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/aachen.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../fonts/aachen.ttf') format('truetype');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: Aachen;
+    font-weight: normal;
+    line-height: 1.1;
+    color: inherit;
+}
+
 body {
     min-width: 320px;
     font-family: Arial, Helvetica, sans-serif;
@@ -79,7 +111,6 @@ h6,
 .h4,
 .h5,
 .h6 {
-    font-family: adelle;
     font-weight: normal;
     line-height: 1.1;
     color: inherit;
@@ -305,7 +336,7 @@ button,
 
 .jumbotron.internal {
     background-image: url("../img/cs1.jpg");
-    background-size: auto 100%;
+    background-size: 100% auto;
 }
 
 .panel .panel-body h2 {
@@ -318,7 +349,7 @@ button,
     font-size: 200px;
     position: absolute;
     z-index: 0;
-    color: #ffffff17;
+    color: rgba(255, 255, 255, 0.15);
     width: 100%;
     left: 0;
     top: 70px;
